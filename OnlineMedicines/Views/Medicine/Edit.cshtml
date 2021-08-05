@@ -1,0 +1,38 @@
+﻿@model OnlineMedicines.Models.Medicine
+
+@{ ViewData["Title"] = "Edit Medicine"; }
+@{ Layout = "_Layout2"; }
+
+<h1>Edit Medicine</h1>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for=" Id" />
+            <div class="form-group">
+                <label asp-for=" MeidicineName" class="control-label"></label>
+                <input asp-for=" MeidicineName" class="form-control" />
+                <span asp-validation-for=" MeidicineName" class="text-danger"></span>
+            </div> <div class="form-group">
+                <label asp-for=" Strips" class="control-label"></label>
+                <input asp-for=" Strips" class="form-control" />
+                <span asp-validation-for=" Strips" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for=" Company" class="control-label"></label>
+                <input asp-for=" Company" class="form-control" />
+                <span asp-validation-for=" Company" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for=" Rate" class="control-label"></label>
+                <input asp-for=" Rate" class="form-control" />
+                <span asp-validation-for=" Rate" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-primary" />
+                <a asp-action="Index">Back to List</a>
+            </div>
+        </form>
+    </div>
+</div>

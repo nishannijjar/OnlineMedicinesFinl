@@ -1,0 +1,58 @@
+﻿@model IEnumerable<OnlineMedicines.Models.OrderMedicine>
+
+@{ ViewData["Title"] = "Home"; }
+@{
+    Layout = "_Layout2";
+}
+<br />
+<p>
+    <a asp-action="Create">Click here to Order Medicine</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Name)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Contact)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.MeidicineName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Strips)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Address)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+<tr>
+    <td>
+        @Html.DisplayFor(modelItem => item.Name)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.Contact)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.MeidicineName)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.Strips)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.Address)
+    </td>
+    <td>
+        <a asp-action="Edit" asp-route-id="@item.Id">Edit</a>
+        <a asp-action="Details" asp-route-id="@item.Id">Details</a>
+        <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+    </td>
+</tr>}
+    </tbody>
+</table>

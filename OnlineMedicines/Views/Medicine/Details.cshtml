@@ -1,0 +1,39 @@
+﻿@model OnlineMedicines.Models.Medicine
+
+@{ ViewData["Title"] = "Details"; }
+@{ Layout = "_Layout2"; }
+<br />
+<div>
+    <h4>Details Medicine</h4>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.MeidicineName)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.MeidicineName)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Strips)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Strips)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Company)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Company)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Rate)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Rate)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.Id">Edit</a>
+    <a asp-action="Index">Back to List</a>
+</div>
